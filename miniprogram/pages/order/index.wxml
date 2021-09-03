@@ -1,10 +1,59 @@
 <!--pages/order/index.wxml-->
-<text>pages/order/index.wxml</text>
 <view class="section">
-  <view class="section__title">日期选择器</view>
-  <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
-    <view class="picker">
-      当前选择: {{date}}
-    </view>
-  </picker>
+  <van-calendar 
+  type="single"
+  show="{{ show }}"
+  show-title="{{false}}"
+  max-date="{{ maxDate }}"
+  poppable="{{ false }}"
+  show-confirm="{{ false }}"
+  formatter="{{ formatter }}"
+  bind:confirm="onConfirm"
+  class="calendar"/>
+
+  <van-dialog
+    use-slot
+    title="预定"
+    className="order"
+    show="{{ orderShow }}"
+    show-cancel-button
+    bind:close="onClose"
+    bind:confirm="onOrderConfirm"
+  >
+    <van-radio-group value="{{ radio }}" bind:change="onChange" class="orderType">
+      <van-radio name="1">
+      <van-cell title="{{ listName }}" bind:click="showPopup" />
+      </van-radio>
+
+      <van-radio name="2">
+       <van-field
+        value="{{ value }}"
+        lable="兑换优惠码"
+        icon="question-o"
+        border="{{ false }}"
+        placeholder="请输入优惠码"
+        bind:change="onChange"
+      />
+      </van-radio>
+      
+      <van-radio name="3"> 
+       <van-cell title="去购买" bind:click="goBuy" is-link/>
+      </van-radio>
+      
+    </van-radio-group>
+  </van-dialog>
+  <van-popup
+    show="{{ listShow }}"
+    position="bottom"
+    custom-style="height: 40%;"
+    bind:close="onClose"
+  >
+    <van-picker 
+        columns="{{ columns }}" 
+        title="已购订单" 
+        show-toolbar
+        bind:confirm="onListConfirm"
+        />
+  </van-popup>
+  <van-toast id="van-toast" />
 </view>

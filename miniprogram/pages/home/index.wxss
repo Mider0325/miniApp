@@ -1,0 +1,7 @@
+.teacher {
+  margin-top: 7rem;
+  border-radius: 1rem;
+}
+.header, .teacher-item {
+  border-radius: 1rem;
+}

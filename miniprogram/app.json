@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/home/index",
     "pages/order/index",
     "pages/my/index",
     "pages/getOpenId/index",
@@ -19,12 +19,12 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "高兴心理",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [
-      {"pagePath": "pages/index/index", "text": "首页",
+      {"pagePath": "pages/home/index", "text": "首页",
         "selectedIconPath": "images/index.png",
         "iconPath": "images/index.png"},
       {"pagePath": "pages/order/index", "text": "预约",
@@ -36,7 +36,20 @@
     ]
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2",
+  "usingComponents": {
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-divider": "@vant/weapp/divider/index"
+  },
   "plugins": {
     "mini-shop-plugin": {   
       "version": "latest",   

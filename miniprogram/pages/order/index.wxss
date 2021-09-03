@@ -1,1 +1,7 @@
 /* pages/order/index.wxss */
+.order {
+  padding-left: 50rpx;
+}
+.orderType .van-radio{
+  padding-left: 60rpx;
+}

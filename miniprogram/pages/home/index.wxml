@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+   <image
+    class="header"
+    width="20rem"
+    fit="contain"
+    src="../../images/header.png"
+    />
+    
+    <van-divider contentPosition="center">专家介绍</van-divider>
+    
+    <image
+        class="teacher-item"
+        width="20rem"
+        fit="contain"
+        src="../../images/user.png"
+    />
+</view>
