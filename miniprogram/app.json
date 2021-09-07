@@ -48,7 +48,8 @@
     "van-cell": "@vant/weapp/cell/index",
     "van-toast": "@vant/weapp/toast/index",
     "van-image": "@vant/weapp/image/index",
-    "van-divider": "@vant/weapp/divider/index"
+    "van-divider": "@vant/weapp/divider/index",
+    "date": "./components/date/date"
   },
   "plugins": {
     "mini-shop-plugin": {   

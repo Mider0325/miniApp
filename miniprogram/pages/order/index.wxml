@@ -1,15 +1,16 @@
 <!--pages/order/index.wxml-->
 <view class="section">
-  <van-calendar 
+  <date day="18" bindtap=""/>
+  <!-- <van-calendar 
   type="single"
-  show="{{ show }}"
+  show="{{ false }}"
   show-title="{{false}}"
   max-date="{{ maxDate }}"
   poppable="{{ false }}"
   show-confirm="{{ false }}"
   formatter="{{ formatter }}"
   bind:confirm="onConfirm"
-  class="calendar"/>
+  class="calendar"/> -->
 
   <van-dialog
     use-slot

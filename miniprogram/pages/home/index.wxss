@@ -1,7 +1,27 @@
 .teacher {
   margin-top: 7rem;
   border-radius: 1rem;
+  position: relative;
 }
 .header, .teacher-item {
   border-radius: 1rem;
+}
+
+.header .title {
+  display: flex;
+  justify-content: center;
+  margin-top: -12rem;
+}
+
+.header .sub-title {
+  margin-top: 3rem;
+  overflow: hidden;
+  text-emphasis: wrap;
+  display: flex;
+  justify-content: space-around
+}
+
+.header .sub-title .item {
+  display: inline-flex;
+  width: 15px;
 }

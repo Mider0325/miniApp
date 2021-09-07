@@ -1,18 +1,51 @@
 <!--index.wxml-->
 <view class="container">
-   <image
+   <div class="header">
+    <image
     class="header"
     width="20rem"
     fit="contain"
     src="../../images/header.png"
     />
+    <span class="title">咨询领域</span>
     
-    <van-divider contentPosition="center">专家介绍</van-divider>
+    <div class="sub-title">
+        <span class="item">个人成长</span>
+        <span class="item">人际关系</span>
+        <span class="item">抑郁症</span>
+        <span class="item">焦虑关系</span>
+        <span class="item">爱情婚姻</span>
+        <span class="item">亲子关系</span>
+    </div>
+   </div>
+  
     
-    <image
-        class="teacher-item"
-        width="20rem"
-        fit="contain"
-        src="../../images/user.png"
-    />
+    <van-divider contentPosition="center">心理咨询师</van-divider>
+    <div class="teacher">
+        <image
+            class="teacher-item"
+            width="20rem"
+            fit="contain"
+            src="../../images/boss.png"
+        />
+    </div>
+
+
+    <div class="banner">
+          
+    </div>
+    
+
+    <div class="order">
+        <div class="order-item">
+            <div class="order-button" click="">立即预约</div>
+        </div>
+    </div>
+
+     <div class="footer">
+        <div class="footer-item">
+            <image src=""/>
+            <div class="desc"></div>
+        </div>
+    </div>
 </view>
