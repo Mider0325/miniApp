@@ -1,10 +1,18 @@
-.teacher {
-  margin-top: 7rem;
-  border-radius: 1rem;
-  position: relative;
+.container {
+  background: rgb(237, 230, 220);
+  fill: rgb(237, 230, 220)
 }
-.header, .teacher-item {
+
+
+
+.header, .teacher, .bg {
+  display: block;
+  width: 100%;
+}
+
+.header .header-bg {
   border-radius: 1rem;
+  margin-top: 0.5rem;
 }
 
 .header .title {
@@ -14,7 +22,7 @@
 }
 
 .header .sub-title {
-  margin-top: 3rem;
+  margin-top: 3.2rem;
   overflow: hidden;
   text-emphasis: wrap;
   display: flex;
@@ -24,4 +32,19 @@
 .header .sub-title .item {
   display: inline-flex;
   width: 15px;
+}
+
+.teacher-title {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+}
+
+.teacher {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.teacher .teacher-desc p{
+  display: block;
 }

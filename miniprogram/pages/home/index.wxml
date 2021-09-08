@@ -2,8 +2,7 @@
 <view class="container">
    <div class="header">
     <image
-    class="header"
-    width="20rem"
+    class="bg header-bg"
     fit="contain"
     src="../../images/header.png"
     />
@@ -18,16 +17,24 @@
         <span class="item">亲子关系</span>
     </div>
    </div>
-  
     
-    <van-divider contentPosition="center">心理咨询师</van-divider>
+    <div class="teacher-title">心理咨询师</div>
+
     <div class="teacher">
         <image
-            class="teacher-item"
-            width="20rem"
+            class="bg"
             fit="contain"
             src="../../images/boss.png"
         />
+        <div class="teacher-desc">
+            <p class="career">心理咨询师</p>
+            <p class="name">王梓轩</p>
+            <p>牛津大学女性和性别研究硕士</p>
+            <p>伦敦政治经济学院人类学硕士</p>
+            <p>美国心理咨询师协会专业级会员</p>
+            <p>国际婚姻家庭咨询协会专业级会员</p>
+            <p>中科院心理咨询师培训合格资格证</p>
+        </div>
     </div>
 
 
