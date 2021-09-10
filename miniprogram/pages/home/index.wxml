@@ -21,11 +21,6 @@
     <div class="teacher-title">心理咨询师</div>
 
     <div class="teacher">
-        <image
-            class="bg"
-            fit="contain"
-            src="../../images/boss.png"
-        />
         <div class="teacher-desc">
             <p class="career">心理咨询师</p>
             <p class="name">王梓轩</p>

@@ -40,11 +40,17 @@
 }
 
 .teacher {
+  background-image: url('../../images/boss.png');
   margin-top: 2rem;
   border-radius: 1rem;
   position: relative;
 }
-
+.teacher .teacher-desc {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center
+}
 .teacher .teacher-desc p{
   display: block;
 }
