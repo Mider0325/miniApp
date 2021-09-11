@@ -1,9 +1,13 @@
-.container {
+div {
+  display: block;
+}
+.home-container {
   background: rgb(237, 230, 220);
   fill: rgb(237, 230, 220)
 }
-
-
+.header {
+  height: 240px;
+}
 
 .header, .teacher, .bg {
   display: block;
@@ -35,22 +39,69 @@
 }
 
 .teacher-title {
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .teacher {
-  background-image: url('../../images/boss.png');
   margin-top: 2rem;
   border-radius: 1rem;
   position: relative;
 }
 .teacher .teacher-desc {
   display: inline-flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: -15rem;
+    line-height: 1.7rem;
+    font-size: 0.8rem;
 }
 .teacher .teacher-desc p{
   display: block;
+}
+
+.teacher .teacher-desc .career, .name{
+  display: block;
+  font-weight: 800;
+}
+.teacher .teacher-desc .more {
+    width: 6rem;
+    line-height: 2;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    background: rgb(238, 228, 212);
+}
+.order {
+  margin-top: -12rem;
+}
+.order .order-item {
+  margin: 2rem 1rem 0 1rem;
+  display: block;
+  overflow: hidden;
+}
+.order .order-img {
+  border-radius: 2rem;
+}
+
+.order .order-item .order-button {
+  position: relative;
+  left: 13rem;
+  top: -5rem;
+  display: inline-block;
+  background: rgb(238, 228, 212);
+  border: none;
+  border-radius: 11.5px;
+  opacity: 1;
+  width: 120px;
+  height: 48px;
+}
+.footer-item {
+  display: inline-block;
+}
+.footer .logo{
+    width: 4rem;
+    height: 4rem;
 }

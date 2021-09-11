@@ -5,24 +5,34 @@ const { envList } = require('../../envList.js')
 Page({
   data: {
     showUploadTip: false,
-    powerList: [{
-      title: '购买订单',
-      tip: '包含购买的预约产品, 实物商品',
-      showItem: false,
+    socail:[],
+    socail1: [{
+      imgSrc: '/images/weixin-logo.png',
+      id: 'xxx'
     }, {
-      title: '预约列表',
-      tip: '已预约的订单数据', 
+      imgSrc: '/images/titok-logo.png',
+      id: 'xxx'
+    }, {
+      imgSrc: '/images/red-logo.png',
+      id: 'xxx'
+    }],
+    orderTypes: [{
+      type: 'call',
+      imgSrc: '/images/call.png',
+      buttonText: '立即预约'
     },
     {
-      title: '我的购物车',
-      tip: '加购的预约商品 和 实体商品', 
+      type: 'email',
+      imgSrc: '/images/email.png',
+      buttonText: '邮件咨询'
     },
     {
-      title: '联系客服',
-      tip: '工作时间：9:00 ~ 19:00', 
+      type: 'face',
+      imgSrc: '/images/face.png',
+      buttonText: '面对面咨询'
     }],
   },
-
+  
   onClickPowerInfo(e) {
     const index = e.currentTarget.dataset.index
     if(index === 0) {
@@ -31,7 +41,7 @@ Page({
       this.toShop();
     }
   },
-
+  
   toOrder() {
     // 跳转到商品页
     wx.navigateTo({
@@ -42,6 +52,13 @@ Page({
     // 跳转到商品页
     wx.navigateTo({
       url:'plugin-private://wx34345ae5855f892d/pages/shoppingCart/shoppingCart',
+    })
+  },
+  onToOrder(event) {
+    console.log(event, 'event----');
+    let type =  event.currentTarget.dataset.type || 'call'
+    wx.navigateTo({
+      url: '/pages/order/index?type=' + type,
     })
   }
 })

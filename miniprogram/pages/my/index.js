@@ -14,10 +14,6 @@ Page({
       tip: '已预约的订单数据', 
     },
     {
-      title: '我的购物车',
-      tip: '加购的预约商品 和 实体商品', 
-    },
-    {
       title: '联系客服',
       tip: '工作时间：9:00 ~ 19:00', 
     }],
@@ -29,6 +25,9 @@ Page({
       this.toOrder();
     } else if(index === 2) {
       this.toShop();
+    }
+    else if(index === 1) {
+      this.toMylist();
     }
   },
 
@@ -43,5 +42,10 @@ Page({
     wx.navigateTo({
       url:'plugin-private://wx34345ae5855f892d/pages/shoppingCart/shoppingCart',
     })
-  }
+  },
+  toMylist() {
+    wx.navigateTo({
+      url:'/pages/orderList/index',
+    })
+  },
 })

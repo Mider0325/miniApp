@@ -1,6 +1,6 @@
 <!--pages/order/index.wxml-->
 <view class="section">
-  <date day="18" bindtap=""/>
+  <date  bind:selectTime="onSelectTime" unreserveTime="{{unreserveTime}}"/>
   <!-- <van-calendar 
   type="single"
   show="{{ false }}"
@@ -21,25 +21,26 @@
     bind:close="onClose"
     bind:confirm="onOrderConfirm"
   >
-    <van-radio-group value="{{ radio }}" bind:change="onChange" class="orderType">
-      <van-radio name="1">
-      <van-cell title="{{ listName }}" bind:click="showPopup" />
+    <van-radio-group value="{{ orderType }}" class="orderType" bind:change="onTypeChange">
+      <van-radio name="1"> 
+       <van-cell title="立即购买" bind:click="goBuy" is-link/>
+      </van-radio>
+      <van-radio name="2">
+        <van-cell title="{{ listName }}" bind:click="showPopup" />
       </van-radio>
 
-      <van-radio name="2">
+      <van-radio name="3">
        <van-field
         value="{{ value }}"
         lable="兑换优惠码"
         icon="question-o"
         border="{{ false }}"
-        placeholder="请输入优惠码"
+        placeholder="请输入机构码"
         bind:change="onChange"
       />
       </van-radio>
       
-      <van-radio name="3"> 
-       <van-cell title="去购买" bind:click="goBuy" is-link/>
-      </van-radio>
+      
       
     </van-radio-group>
   </van-dialog>

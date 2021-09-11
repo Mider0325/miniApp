@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="home-container">
    <div class="header">
     <image
     class="bg header-bg"
@@ -21,6 +21,7 @@
     <div class="teacher-title">心理咨询师</div>
 
     <div class="teacher">
+       <image src="/images/boss.png" alt="" class="bg" fit="contain"/>
         <div class="teacher-desc">
             <p class="career">心理咨询师</p>
             <p class="name">王梓轩</p>
@@ -29,25 +30,29 @@
             <p>美国心理咨询师协会专业级会员</p>
             <p>国际婚姻家庭咨询协会专业级会员</p>
             <p>中科院心理咨询师培训合格资格证</p>
+            <button type="default" plain="true" bindtap="onMore" class="more">了解更多</button>
         </div>
     </div>
 
 
     <div class="banner">
-          
     </div>
-    
 
     <div class="order">
-        <div class="order-item">
-            <div class="order-button" click="">立即预约</div>
+        <div class="order-item" wx:for="{{orderTypes}}" wx:key="index">
+            <image src="{{item.imgSrc}}" alt=""  class="bg order-img" fit="contain"/>
+            <p>
+            </p>
+            <button type="default" plain="true" bindtap="onToOrder" data-type="{{item.type}}" class="order-button">
+                {{item.buttonText}}
+            </button>
         </div>
     </div>
 
      <div class="footer">
-        <div class="footer-item">
-            <image src=""/>
-            <div class="desc"></div>
+        <div class="footer-item" wx:for="{{socail}}" key="{{index}}">
+            <image src="{{item.imgSrc}}" mode="scaleToFill" class="logo"/>
+            <div class="desc">{{item.id}}</div>
         </div>
     </div>
 </view>

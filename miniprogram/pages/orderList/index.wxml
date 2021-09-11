@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="my-list" wx:key="title" wx:for="{{powerList}}" wx:for-item="power">
+    <view class="power_info" data-index="{{index}}" bindtap="onClickPowerInfo">
+      <view class="power_info_text">
+        <view class="power_info_text_title">{{power.title}}</view>
+        <view class="power_info_text_tip">{{power.id}}</view>
+      </view>
+      <!-- <button class="power_item_icon" bindtap="cancelOrder" data-id="{{id.id}}">取消预约</button> -->
+      <button type="warn" plain="true" bindtap="onToOrder" data-type="{{powers.id}}" class="cancle-button"> 取消预约</button>
+    </view>
+  </view>
+</view>

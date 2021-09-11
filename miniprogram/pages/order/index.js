@@ -14,11 +14,13 @@ Page({
       startDate:"",
       endDate: "",
       show: true,
+      needType: 'call',
       orderShow: false,
       listShow: false,
       maxDate: 0,
-      listName: '兑换已购订单',
+      listName: '选择已购订单',
       columns: ["订单1", "订单2", "订单3"],
+      orderType: "",
       formatter(day) {
         const month = day.date.getMonth() + 1;
         const date = day.date.getDate();
@@ -36,11 +38,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      let today =  new Date();
-      let maxDate = (new Date()).setDate(today.getDate() + 60);
+      // let today =  new Date();
+      // let maxDate = (new Date()).setDate(today.getDate() + 60);
       
-      this.setData({maxDate: maxDate});
-      console.log(miniShopPlugin, 'miniShopPlugin-----');
+      // this.setData({maxDate: maxDate});
+      // console.log(miniShopPlugin, 'miniShopPlugin-----');
+      this.data.needType = options.type;
   },
 
   /**
@@ -98,7 +101,12 @@ Page({
     console.log('xxxxx');
   },
   onOrderConfirm: function() {
-    Toast.success('恭喜预定成功');
+    console.log(this.data.orderType , 'orderType----+++');
+    if(this.data.orderType === "") {
+      Toast.fail('请选择预定方式');
+    } else {
+      Toast.success('恭喜预定成功');
+    }
   },
   showPopup: function() {
     this.setData({
@@ -117,8 +125,25 @@ Page({
   goBuy() {
     // 跳转到商品页
     let productId="47189388";
+    let type2productId = {
+      email: "49610311",
+      call: "49470602",
+      face: "49470999"
+    }
+    productId =  type2productId[this.data.needType]
     wx.navigateTo({
           url: `plugin-private://wx34345ae5855f892d/pages/productDetail/productDetail?productId=${productId}`,
+    })
+  },
+  onSelectTime() {
+     console.log(arguments, 'arguments---');
+    this.setData({
+      orderShow: true
+    })
+  },
+  onTypeChange(val) {
+    this.setData({
+      orderType: val.detail
     })
   }
 })

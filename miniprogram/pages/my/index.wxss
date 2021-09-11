@@ -29,6 +29,13 @@ page {
   width: 93%;
   padding-bottom: 1rpx;
 }
+.my-list {
+  margin-top: 30rpx;
+  border-radius: 5px;
+  background-color: rgb(237, 230, 220);
+  width: 93%;
+  padding-bottom: 1rpx;
+}
 
 .power_info {
   display: flex;

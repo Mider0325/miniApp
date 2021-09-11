@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="power" wx:key="title" wx:for="{{powerList}}" wx:for-item="power">
+  <view class="my-list" wx:key="title" wx:for="{{powerList}}" wx:for-item="power">
     <view class="power_info" data-index="{{index}}" bindtap="onClickPowerInfo">
       <view class="power_info_text">
         <view class="power_info_text_title">{{power.title}}</view>
