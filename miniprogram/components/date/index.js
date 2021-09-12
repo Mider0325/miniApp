@@ -21,7 +21,7 @@ Component({
         },
         reserveUnit: {  // 预约时间单位（默认60分钟）
             type: Number,
-            value: 60,
+            value: 0,
         },
         activedConst: { // 已经选中的常量标示
             type: Number,

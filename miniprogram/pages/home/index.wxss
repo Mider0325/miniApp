@@ -15,18 +15,20 @@ div {
 }
 
 .header .header-bg {
-  border-radius: 1rem;
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
 }
 
 .header .title {
   display: flex;
   justify-content: center;
-  margin-top: -12rem;
+  margin-top: -12.5rem;
+  font-size: 1.3rem;
 }
-
+.white {
+  color: #fff;
+}
 .header .sub-title {
-  margin-top: 3.2rem;
+  margin-top: 3.8rem;
   overflow: hidden;
   text-emphasis: wrap;
   display: flex;
@@ -39,25 +41,30 @@ div {
 }
 
 .teacher-title {
-  margin-top: 2rem;
-  font-size: 1.5rem;
+  margin-top: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
 }
 
 .teacher {
-  margin-top: 2rem;
+  margin-top: 1.2rem;
   border-radius: 1rem;
   position: relative;
 }
+.teacher image{
+  height: 280px;
+}
+
 .teacher .teacher-desc {
   display: inline-flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    top: -15rem;
-    line-height: 1.7rem;
-    font-size: 0.8rem;
+  /* flex-direction: column;
+  justify-content: space-around; */
+  align-items: center;
+  position: relative;
+  top: -3rem;
+  left: 2rem;
+  line-height: 1.7rem;
+  font-size: 0.8rem;
 }
 .teacher .teacher-desc p{
   display: block;
@@ -68,14 +75,16 @@ div {
   font-weight: 800;
 }
 .teacher .teacher-desc .more {
-    width: 6rem;
-    line-height: 2;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    background: rgb(238, 228, 212);
+  width: 5.5rem;
+  line-height: 2;
+  font-size: 14px;
+  background: rgb(238, 228, 212);
+  border: none;
+  border-radius: 8px;
 }
+
 .order {
-  margin-top: -12rem;
+  margin-top: -2rem;
 }
 .order .order-item {
   margin: 2rem 1rem 0 1rem;
@@ -98,8 +107,9 @@ div {
   width: 120px;
   height: 48px;
 }
-.footer-item {
-  display: inline-block;
+.footer {
+  display: flex;
+  justify-content: space-around;
 }
 .footer .logo{
     width: 4rem;

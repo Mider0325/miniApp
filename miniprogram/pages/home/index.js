@@ -5,31 +5,31 @@ const { envList } = require('../../envList.js')
 Page({
   data: {
     showUploadTip: false,
-    socail:[],
-    socail1: [{
+    // socail:[],
+    socail: [{
       imgSrc: '/images/weixin-logo.png',
-      id: 'xxx'
+      id: '梓轩心理咨询'
     }, {
       imgSrc: '/images/titok-logo.png',
-      id: 'xxx'
+      id: '梓轩心理咨询'
     }, {
       imgSrc: '/images/red-logo.png',
-      id: 'xxx'
+      id: '梓轩心理咨询'
     }],
     orderTypes: [{
       type: 'call',
       imgSrc: '/images/call.png',
-      buttonText: '立即预约'
-    },
-    {
-      type: 'email',
-      imgSrc: '/images/email.png',
-      buttonText: '邮件咨询'
+      buttonText: '视频/语音咨询'
     },
     {
       type: 'face',
       imgSrc: '/images/face.png',
       buttonText: '面对面咨询'
+    },
+    {
+      type: 'email',
+      imgSrc: '/images/email.png',
+      buttonText: '邮件咨询'
     }],
   },
   

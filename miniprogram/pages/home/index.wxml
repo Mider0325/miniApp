@@ -9,31 +9,30 @@
     <span class="title">咨询领域</span>
     
     <div class="sub-title">
-        <span class="item">个人成长</span>
-        <span class="item">人际关系</span>
-        <span class="item">抑郁症</span>
-        <span class="item">焦虑关系</span>
         <span class="item">爱情婚姻</span>
         <span class="item">亲子关系</span>
+        <span class="item white">抑郁症</span>
+        <span class="item white">焦虑症</span>
+        <span class="item">睡眠障碍</span>
+        <span class="item">个人成长</span>
     </div>
    </div>
     
     <div class="teacher-title">心理咨询师</div>
 
     <div class="teacher">
-       <image src="/images/boss.png" alt="" class="bg" fit="contain"/>
+       <image src="/images/boss.png" alt="" class="bg" />
         <div class="teacher-desc">
-            <p class="career">心理咨询师</p>
+            <!-- <p class="career">心理咨询师</p>
             <p class="name">王梓轩</p>
             <p>牛津大学女性和性别研究硕士</p>
             <p>伦敦政治经济学院人类学硕士</p>
             <p>美国心理咨询师协会专业级会员</p>
             <p>国际婚姻家庭咨询协会专业级会员</p>
-            <p>中科院心理咨询师培训合格资格证</p>
+            <p>中科院心理咨询师培训合格资格证</p> -->
             <button type="default" plain="true" bindtap="onMore" class="more">了解更多</button>
         </div>
     </div>
-
 
     <div class="banner">
     </div>
@@ -41,8 +40,6 @@
     <div class="order">
         <div class="order-item" wx:for="{{orderTypes}}" wx:key="index">
             <image src="{{item.imgSrc}}" alt=""  class="bg order-img" fit="contain"/>
-            <p>
-            </p>
             <button type="default" plain="true" bindtap="onToOrder" data-type="{{item.type}}" class="order-button">
                 {{item.buttonText}}
             </button>
@@ -51,8 +48,7 @@
 
      <div class="footer">
         <div class="footer-item" wx:for="{{socail}}" key="{{index}}">
-            <image src="{{item.imgSrc}}" mode="scaleToFill" class="logo"/>
-            <div class="desc">{{item.id}}</div>
+                <image src="{{item.imgSrc}}" mode="scaleToFill" class="logo"/>
         </div>
     </div>
 </view>
